@@ -10,11 +10,6 @@ g = G(direct_write=True, print_lines=True)
 pressure_box = 4
 
 
- #g.set_valve(num = 0, value = 0)
-   #pb.set_pressure(com_port = 4, value = 5)
-   #pb.toggle_pressure(4)
-g.abs_move(x=10)
-g.move(x=10)
 
 def print_LED_circuit(z, feed, dwell, pressure, axis, valve, valve_bank = True):
     g.feed(15)
@@ -88,3 +83,4 @@ def print_LED_circuit(z, feed, dwell, pressure, axis, valve, valve_bank = True):
 pb.toggle_pressure(pressure_box) 
 print_LED_circuit(z = 0.2, feed = 2, dwell = 0.1, pressure = 5, axis = 'Z', valve = 0, valve_bank=False) 
 pb.toggle_pressure(pressure_box)
+g.teardown
